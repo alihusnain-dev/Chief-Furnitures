@@ -282,7 +282,7 @@
                                 </svg>
                             </a>
 
-                            <a href="https://www.facebook.com/alihusnain.dev/"
+                            <a href="https://www.linkedin.com/in/alihusnain-dev"
                                 class="mx-2 text-indigo-400 transition-colors duration-300 hover:text-indigo-00"
                                 aria-label="Facebook">
                                 <svg class="w-6 h-6 fill-current" xmlns="http://www.w3.org/2000/svg"

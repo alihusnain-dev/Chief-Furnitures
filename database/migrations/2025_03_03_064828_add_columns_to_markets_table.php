@@ -14,6 +14,8 @@ return new class extends Migration
         Schema::table('markets', function (Blueprint $table) {
             $table->string('file_path')->nullable();
             $table->string('size');
+            $table->float('quantity');
+            $table->string('user_id');
             //
         });
     }

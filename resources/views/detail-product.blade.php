@@ -49,10 +49,10 @@
     </div>
 
     <section class="py-5 md:py-10 antialiased my-10 md:my-20">
-        <div class="max-w-screen-xl px-4 mx-auto 2xl:px-0">
-            <div class="lg:grid lg:grid-cols-2 lg:gap-8 xl:gap-16">
+        <div class="max-w-screen-xl sm:px-4 mx-auto 2xl:px-0">
+            <div class="lg:grid lg:grid-cols-2">
                 <div class="shrink-0 min-w-full sm:w-[250px] md:w-[700px] lg:w-[500px] mx-auto">
-                    <img class="w-full rounded md:h-[450px] lg:h-[350px] object-cover object-center"
+                    <img class="w-full rounded md:h-[480px] lg:h-[520px] object-cover object-center"
                         src="{{ asset('storage/' . $product->file) }}" alt="{{ $product->name }}" />
                 </div>
 
@@ -160,9 +160,9 @@
         </div>
         <div class="my-5 max-w-[900px] mx-auto">
             @if($product->Reviews->isEmpty())
-                <div class="text-2xl font-medium tracking-wide text-center mb-20">
+                <div class="text-2xl font-medium tracking-wide text-center mb-20 py-10">
                     <img src="{{asset('assets/svg/undraw_empty-cart_574u.svg')}}" class="w-60 mb-3 mx-auto" alt="">
-                    <p>No reviews yet. Be the first to leave a review!</p>
+                    <p class="text-sm md:text-lg">No reviews yet. Be the first to leave a review!</p>
                 </div>
             @endif
             @foreach ($product->Reviews->sortByDesc('created_at') as $review)

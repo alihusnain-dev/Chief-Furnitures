@@ -35,7 +35,7 @@
                 </div>
             </div>
         @endif
-        <div class="w-full flex justify-end md:px-28">
+        <div class="w-full flex justify-end px-5">
             @auth
                 <a href="{{route('cart', auth()->user()->id)}}"
                     class=" py-2 px-5 bg-slate-600 hover:bg-slate-700 hover:shadow rounded md:text-xl font-medium text-white relative">
@@ -59,7 +59,7 @@
             </div>
         @else
             <div
-                class="products my-5 p-2 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 2xl:grid-cols-5 gap-5 justify-center item-center mx-auto">
+                class="products my-5 p-2 grid gap-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 2xl:grid-cols-5 justify-center item-center mx-auto">
                 @foreach ($products as $product)
                     <div class="product flex flex-col rounded overflow-hidden pb-5 w-full sm:w-[320px] mx-auto">
                         <a href="{{route('product.detail', $product->slug)}}" class="w-full">
@@ -101,7 +101,6 @@
                             </a>
                         @endauth
                     </div>
-
                 @endforeach
             </div>
             <div class="pagination mx-32">
