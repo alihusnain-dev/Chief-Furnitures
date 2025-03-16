@@ -51,13 +51,12 @@
     <section class="py-5 md:py-10 antialiased my-10 md:my-20">
         <div class="max-w-screen-xl px-4 mx-auto 2xl:px-0">
             <div class="lg:grid lg:grid-cols-2 lg:gap-8 xl:gap-16">
-                <div class="shrink-0 w-[250px] md:w-[700px] lg:w-[500px] mx-auto">
-                    <img class="w-full rounded md:h-[450px] lg:h-[350px] object-cover"
+                <div class="shrink-0 min-w-full sm:w-[250px] md:w-[700px] lg:w-[500px] mx-auto">
+                    <img class="w-full rounded md:h-[450px] lg:h-[350px] object-cover object-center"
                         src="{{ asset('storage/' . $product->file) }}" alt="{{ $product->name }}" />
                 </div>
 
-                <div
-                    class="relative bg-white/50 p-4 rounded sm:mt-8 lg:mt-0 mt-5 min-w-full flex flex-col justify-between h-full">
+                <div class="relative bg-white/50 p-4 rounded lg:mt-0 min-w-full flex flex-col justify-between h-full">
                     <div>
                         <h1 class="text-xl font-semibold text-gray-900 sm:text-2xl">{{ $product->name }}</h1>
                         <p class="text-2xl font-extrabold text-gray-900 sm:text-3xl mt-4">Rs
@@ -114,7 +113,7 @@
                 our products. Trust their experiences to guide your purchase.
             </p>
         </div>
-        <form action="{{ route('reviews.store', $product->id) }}" method="POST" class="mt-2">
+        <form action="{{ route('reviews.store', $product->id) }}" method="POST" class="mt-2 max-w-[900px]  mx-auto">
             @csrf
 
             <textarea name="description"
@@ -142,7 +141,7 @@
                     class="mt-5 px-4 py-2 bg-amber-500 text-white font-medium rounded-lg hover:bg-amber-600">Login First</a>
             @endauth
         </form>
-        <div class="flex flex-wrap items-center space-x-2 my-3">
+        <div class="flex flex-wrap items-center space-x-2 my-3  max-w-[900px] mx-auto">
             <p class="text-lg font-semibold">Average Rating:</p>
             <div class="flex items-center space-x-1">
                 @php
@@ -159,7 +158,7 @@
             </div>
             <p class="text-gray-500">({{ $product->Reviews->count() }} reviews)</p>
         </div>
-        <div class="my-4 max-w-[800px]">
+        <div class="my-5 max-w-[900px] mx-auto">
             @if($product->Reviews->isEmpty())
                 <div class="text-2xl font-medium tracking-wide text-center mb-20">
                     <img src="{{asset('assets/svg/undraw_empty-cart_574u.svg')}}" class="w-60 mb-3 mx-auto" alt="">

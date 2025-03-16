@@ -61,7 +61,7 @@
             <div
                 class="products my-5 p-2 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 2xl:grid-cols-5 gap-5 justify-center item-center mx-auto">
                 @foreach ($products as $product)
-                    <div class="product flex flex-col rounded overflow-hidden pb-5 sm:w-[300px] mx-auto">
+                    <div class="product flex flex-col rounded overflow-hidden pb-5 w-full sm:w-[320px] mx-auto">
                         <a href="{{route('product.detail', $product->slug)}}" class="w-full">
                             <div class="w-full cursor-pointer rounded-xl overflow-hidden">
                                 <img class="rounded-xl w-full h-[220px] object-cover hover:scale-105 transition-all ease-in-out duration-500"
@@ -77,8 +77,8 @@
                                     <p class="text-gray-500 ml-2"> 4.5</p>
                                     <p class="text-gray-400 ml-2 text-xs">({{$product->Reviews->count()}} Reviews)</p>
                                 </div>
-                                <p class="text-gray-700 text-xl">Rs <span
-                                        class="font-medium text-2xl">{{ number_format($product->price, 2) }}</span></p>
+                                <p class="text-gray-700 text-xl">Rs <span class="font-medium text-2xl">{{
+                        number_format($product->price, 2) }}</span></p>
                             </div>
                             <div class="mr-1 mt-2">
                                 <div class="like">
@@ -101,6 +101,7 @@
                             </a>
                         @endauth
                     </div>
+
                 @endforeach
             </div>
             <div class="pagination mx-32">
